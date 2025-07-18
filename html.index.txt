@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hk Xettri | Portfolio</title>
+<meta name="description" content="Personal portfolio of Hk Xettri - Web Developer, Blogger, and Content Creator." />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #fff;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  header nav a:hover {
+    color: #f39c12;
+  }
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.2s ease-in;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero span {
+    color: #f39c12;
+  }
+  .hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f39c12;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  .hero .btn:hover {
+    transform: scale(1.05);
+  }
+  .about,
+  .portfolio,
+  .blog,
+  .contact {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-in-out;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  .grid img:hover {
+    transform: scale(1.05);
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+  }
+  .contact input,
+  .contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .contact button {
+    padding: 12px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .contact button:hover {
+    background: #333;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 40px;
+  }
+  /* Dark Mode */
+  body.dark {
+    background: #121212;
+    color: #fff;
+  }
+  body.dark header {
+    background: #333;
+  }
+  body.dark nav a {
+    color: #f39c12;
+  }
+  body.dark .hero .btn {
+    background: #f39c12;
+    color: #121212;
+  }
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Profile Photo CSS */
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-photo:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Hk Xettri</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Hire Me</a>
+    <button id="theme-toggle">??</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hello, I'm <span>Hk Xettri</span></h1>
+  <p>Web Developer | Blogger | Content Creator</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <div style="max-width: 600px; margin: auto; text-align: center;">
+    <img src="hkphoto.jpg" alt="Hk Xettri" class="profile-photo" />
+    <p>
+      I am passionate about web design, blogging, and creating engaging content. Explore my portfolio and
+      blogs below!
+    </p>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <h2>My Work</h2>
+  <div class="grid">
+    <img src="https://via.placeholder.com/300x200" alt="Project 1" />
+    <img src="https://via.placeholder.com/300x200" alt="Project 2" />
+    <img src="https://via.placeholder.com/300x200" alt="Project 3" />
+  </div>
+</section>
+
+<section id="blog" class="blog">
+  <h2>My Blog</h2>
+  <div class="grid">
+    <div>
+      <img src="https://via.placeholder.com/300x200" alt="Blog Post" />
+      <h3>Blog Title</h3>
+      <p>Short intro about the blog.</p>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200" alt="Blog Post" />
+      <h3>Blog Title</h3>
+      <p>Short intro about the blog.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Hire Me</h2>
+  <form action="mailto:hkxettri@example.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Hk Xettri. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Dark Mode Toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    themeToggle.textContent = document.body.classList.contains('dark') ? '??' : '??';
+  });
+
+  // Scroll Animation
+  const sections = document.querySelectorAll('.about, .portfolio, .blog, .contact');
+  window.addEventListener('scroll', () => {
+    sections.forEach((section) => {
+      const position = section.getBoundingClientRect().top;
+      if (position < window.innerHeight - 100) {
+        section.classList.add('show');
+      }
+    });
+  });
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/687a31545edb441916f55a49/1j0el1dho';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
